@@ -9,6 +9,8 @@ export default [
   layout("portfolio/layout.tsx", [
     index("portfolio/home.tsx"),
     route("about", "portfolio/about.tsx"),
+    route("certifications", "portfolio/certifications.tsx"),
+    route("experience", "portfolio/experience.tsx"),
     route("projects", "portfolio/projects.tsx"),
     route("contact", "portfolio/contact.tsx"),
   ]),

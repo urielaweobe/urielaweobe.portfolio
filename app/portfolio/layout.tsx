@@ -1,66 +1,32 @@
-import { FaGithub, FaThreads, FaXTwitter } from "react-icons/fa6";
-import { Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 export default function Layout() {
   return (
-    <>
-      <nav className="w-dvw flex items-center justify-between text-sm md:text-base px-3">
-        <a href="/" className="hover:underline">
+    <div className="min-h-dvh flex flex-col">
+      <nav className="w-dvw flex items-center justify-between text-sm md:text-base px-3 mb-4 sm:mb-0">
+        <NavLink to="/" className="hover:underline">
           urielaweobe
-        </a>
+        </NavLink>
         <ul className="flex space-x-2">
           <li>
-            <a href="/about" className="hover:underline">
-              about
-            </a>
-          </li>
-          <li>
-            <a href="/projects" className="hover:underline">
+            <NavLink to="/projects" className="hover:underline">
               projects
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="hover:underline">
-              contact
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <main>
+      <main className="flex-1 overflow-auto">
         <body>
           <Outlet />
         </body>
       </main>
       <footer className="w-dvw flex items-center justify-center text-sm md:text-base">
-        <div className="flex items-center justify-between w-full max-w-xs px-4">
-          <div className="flex items-center space-x-2">
-            <a
-              href="https://github.com/urielaweobe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size="20" />
-            </a>
-            <a
-              href="https://www.threads.com/@urielaweobe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaThreads size="20" />
-            </a>
-            <a
-              href="https://x.com/urielaweobe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaXTwitter size="20" />
-            </a>
-          </div>
+        <div className="flex items-center justify-center w-full max-w-xs">
           <div>
             <span>© {new Date().getFullYear()}</span>
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
