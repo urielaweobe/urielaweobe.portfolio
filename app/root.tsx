@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/remix"
+import { Analytics } from "@vercel/analytics/react"
 import {
   isRouteErrorResponse,
   Links,
