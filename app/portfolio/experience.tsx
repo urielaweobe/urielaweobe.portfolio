@@ -17,7 +17,7 @@ export function meta() {
 export default function Experience() {
   return (
     <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
-      <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-1/3 mt-8 sm:mt-0">
+      <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-1/3 mt-auto sm:mt-0">
         <BreadcrumbComponent page="career" />
         <div>
           {experiences.map((experience) => (

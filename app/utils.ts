@@ -90,26 +90,65 @@ export const socials = [
   {
     id: 1,
     name: "github",
-    url: "https://github.com/urielaweobe"
+    url: "https://github.com/urielaweobe",
   },
   {
     id: 2,
     name: "threads",
-    url: "https://www.threads.com/@urielaweobe"
+    url: "https://www.threads.com/@urielaweobe",
   },
   {
     id: 3,
     name: "twitter",
-    url: "https://x.com/urielaweobe"
+    url: "https://x.com/urielaweobe",
   },
   {
     id: 4,
     name: "linkedin",
-    url: "https://www.linkedin.com/in/uriel-awe-obe/"
+    url: "https://www.linkedin.com/in/uriel-awe-obe/",
   },
   {
     id: 5,
     name: "instagram",
-    url: "https://www.instagram.com/urielaweobe/"
-  }
-]
+    url: "https://www.instagram.com/urielaweobe/",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "urielaweobe portfolio",
+    description:
+      "my personal portfolio website showcasing my projects, experience, and skills as a frontend developer.",
+    tech_used: "react, typescript, tailwind css, remix",
+    url: "#",
+    domain: "urielaweobe.com",
+  },
+  {
+    id: 2,
+    title: "stock-ai analysis tool",
+    description:
+      "a web application that uses AI to analyze stock market trends and provide investment insights.",
+    tech_used: "React, Mistral AI, Cloudflare, Typescript, Tailwind CSS",
+    url: "#",
+    domain: "stockai.example.com",
+  },
+  {
+    id: 3,
+    title: "employee handbook agent",
+    description:
+      "An AI-powered chatbot that helps employees quickly find information in the company handbook.",
+    tech_used: "React, Mistral AI, Node.js, Remix, Tailwind CSS, ShadCN",
+    url: "#",
+    domain: "handbookagent.example.com",
+  },
+  {
+    id: 4,
+    title: "random ideas generator",
+    description:
+      "A web app that generates random project ideas to inspire developers and creatives.",
+    tech_used: "Vanilla JavaScript, Node.js, CSS",
+    url: "#",
+    domain: "randomideas.example.com",
+  },
+];
