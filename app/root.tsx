@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import {
   isRouteErrorResponse,
   Links,
@@ -34,6 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
 				<Analytics />
+        <SpeedInsights />
         {children}
         <ScrollRestoration />
         <Scripts />
