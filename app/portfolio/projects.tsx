@@ -1,3 +1,4 @@
+import { CgArrowLongDown, CgArrowLongUp, CgArrowsV } from "react-icons/cg";
 import { PiArrowUpRightThin } from "react-icons/pi";
 import { Link } from "react-router";
 import { Card, CardContent } from "~/components/ui/card";
@@ -22,6 +23,17 @@ export function meta() {
 }
 
 export default function Projects() {
+  const projectIcons = (projectId: number) => {
+    switch (true) {
+      case projectId === projects.length:
+        return <CgArrowLongUp className="animate-bounce" />;
+      case projectId === 1:
+        return <CgArrowLongDown className="animate-bounce" />;
+      default:
+        return <CgArrowsV className="animate-bounce" />;
+    }
+  };
+
   return (
     <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-[500px]">
@@ -66,22 +78,27 @@ export default function Projects() {
           orientation="vertical"
           className="w-full max-w-xs sm:hidden inline"
         >
-          <CarouselContent className="-mt-1 h-[210px]">
+          <CarouselContent className="-mt-1 h-[220px]">
             {projects.map((project) => (
               <CarouselItem key={project.id}>
-                <div className="p-1 space-y-4">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <p>{project.tech_used}</p>
-                  <Link
-                    to={project.url}
-                    target="_blank"
-                    className="flex hover:underline items-center group gap-x-1.5"
-                    key={project.id}
-                  >
-                    {project.domain}{" "}
-                    <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </Link>
+                <div className="flex">
+                  <div className="p-1 space-y-4">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <p>{project.tech_used}</p>
+                    <Link
+                      to={project.url}
+                      target="_blank"
+                      className="flex hover:underline items-center group gap-x-1.5"
+                      key={project.id}
+                    >
+                      {project.domain}{" "}
+                      <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Link>
+                  </div>
+                  <div className="my-auto">
+                    {projectIcons(project.id)}
+                  </div>
                 </div>
               </CarouselItem>
             ))}

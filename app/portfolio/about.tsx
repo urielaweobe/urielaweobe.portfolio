@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
 
 export function meta() {
   return [
@@ -14,6 +15,11 @@ export default function About() {
   return (
     <section className="h-[calc(100dvh-55px)] overflow-auto flex flex-row items-center justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-1/3">
+        <BreadcrumbComponent
+          previousPageUrl="/"
+          previousPage="home"
+          currentPage="about me"
+        />
         <p>
           Hi, I’m <span className="font-semibold">Uriel Awe-Obe</span>, a
           curious problem-solver and&nbsp;
@@ -54,9 +60,11 @@ export default function About() {
           clean design.
         </p>
         <p>
-          <Link to="/contact" className="underline font-semibold">Outside of work</Link>, I love exploring new tools, experimenting with UI
-          animations, and occasionally writing about what I learn in frontend
-          development
+          <Link to="/contact" className="underline font-semibold">
+            Outside of work
+          </Link>
+          , I love exploring new tools, experimenting with UI animations, and
+          occasionally writing about what I learn in frontend development
         </p>
 
         <p>
