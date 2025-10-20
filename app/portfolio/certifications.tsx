@@ -18,7 +18,11 @@ export default function Certifications() {
   return (
     <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
-        <BreadcrumbComponent page="certifications & courses" />
+        <BreadcrumbComponent
+          currentPage="certifications & courses"
+          previousPage="about me"
+          previousPageUrl="/about"
+        />
         <ul className="mt-6">
           <li className="space-y-2">
             {certifications.map((certification) => (

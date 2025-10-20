@@ -17,7 +17,12 @@ export default function Contact() {
   return (
     <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[500px] wrap-balance text-sm md:text-base lg:max-w-1/2">
-        <BreadcrumbComponent className="mx-auto sm:mx-0" page="connect" />
+        <BreadcrumbComponent
+          className="mx-auto sm:mx-0"
+          previousPage="about me"
+          previousPageUrl="/about"
+          currentPage="connect"
+        />
         <div className="flex items-center space-x-3 mx-auto sm:mx-0">
           <ul className="mt-6">
             <li className="space-y-2">
