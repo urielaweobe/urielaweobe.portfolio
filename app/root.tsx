@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/remix"
 import {
   isRouteErrorResponse,
   Links,
@@ -33,8 +33,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+				<Analytics />
         {children}
-				<SpeedInsights />
         <ScrollRestoration />
         <Scripts />
       </body>
