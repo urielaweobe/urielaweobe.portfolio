@@ -145,14 +145,4 @@ export const projects = [
     domain: "visit handbook agent",
     img: "public/images/handbook-agent.png",
   },
-  {
-    id: 4,
-    title: "random ideas generator",
-    description:
-      "A web app that generates random project ideas to inspire developers and creatives.",
-    tech_used: "Vanilla JavaScript, Node.js, CSS.",
-    url: "#",
-    domain: "visit random ideas generator",
-    img: "public/images/stock-ai.png",
-  },
 ];
