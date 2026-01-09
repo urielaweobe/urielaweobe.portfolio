@@ -24,28 +24,31 @@ export function BreadcrumbComponent({
   previousPage,
 }: BreadcrumbProps) {
   return (
-    <Breadcrumb className={className}>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink className="font-light">
-            <Link
-              to={previousPageUrl || "/"}
-              className="flex items-center gap-1 group"
-            >
-              <CgArrowLongLeft className="transition-transform duration-200 ease-in-out group-hover:-translate-x-1" />
-              {previousPage}
-            </Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator>
-          <SlashIcon />
-        </BreadcrumbSeparator>
-        <BreadcrumbItem>
-          <BreadcrumbPage className="font-semibold">
-            {currentPage}
-          </BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbList>
-    </Breadcrumb>
+    <>
+      <Breadcrumb className={className}>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink className="font-light">
+              <Link
+                to={previousPageUrl || "/"}
+                className="flex items-center gap-1 group"
+              >
+                <CgArrowLongLeft className="transition-transform duration-200 ease-in-out group-hover:-translate-x-1" />
+                {previousPage}
+              </Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage className="font-semibold">
+              {currentPage}
+            </BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <hr />
+    </>
   );
 }

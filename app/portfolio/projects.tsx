@@ -36,7 +36,7 @@ export default function Projects() {
 
   return (
     <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
-      <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-[500px]">
+      <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-125">
         {/* Desktop view */}
         <Carousel className="w-full  sm:inline hidden mx-auto">
           <CarouselContent>
@@ -47,10 +47,8 @@ export default function Projects() {
                   <p>{project.description}</p>
                   <p>{project.tech_used}</p>
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {project.id}
-                      </span>
+                    <CardContent className="flex  items-center justify-center p-6">
+                      <img src={project.img} alt={project.title} width="100%" />
                     </CardContent>
                   </Card>
                   <Link
@@ -78,7 +76,7 @@ export default function Projects() {
           orientation="vertical"
           className="w-full max-w-xs sm:hidden inline"
         >
-          <CarouselContent className="-mt-1 h-[220px]">
+          <CarouselContent className="-mt-1 h-55">
             {projects.map((project) => (
               <CarouselItem key={project.id}>
                 <div className="flex">
