@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router";
+import { Link, NavLink, Outlet } from "react-router";
 
 export default function Layout() {
   return (
@@ -23,7 +23,12 @@ export default function Layout() {
       <footer className="w-dvw flex items-center justify-center text-sm md:text-base">
         <div className="flex items-center justify-center w-full max-w-xs">
           <div>
-            <span>© {new Date().getFullYear()}</span>
+            <span>
+              © {new Date().getFullYear()} -{" "}
+              <Link to="/contact" className="font-normal">
+                urielaweobe
+              </Link>
+            </span>
           </div>
         </div>
       </footer>
