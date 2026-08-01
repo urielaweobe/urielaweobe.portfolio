@@ -123,7 +123,7 @@ export const projects = [
     tech_used: "react, typescript, tailwind css, remix.",
     url: "https://urielaweobe.com",
     domain: "visit portfolio",
-    img: "public/images/portfolio.png",
+    img: "/images/portfolio.png",
   },
   {
     id: 2,
@@ -133,7 +133,7 @@ export const projects = [
     tech_used: "React, Mistral AI, Cloudflare, Typescript, Tailwind CSS.",
     url: "https://stock-ai-livid.vercel.app/",
     domain: "visit stock ai",
-    img: "public/images/stock-ai.png",
+    img: "/images/stock-ai.png",
   },
   {
     id: 3,
@@ -143,6 +143,6 @@ export const projects = [
     tech_used: "React, Mistral AI, Node.js, Remix, Tailwind CSS, ShadCN.",
     url: "#",
     domain: "visit handbook agent",
-    img: "public/images/handbook-agent.png",
+    img: "/images/handbook-agent.png",
   },
 ];
