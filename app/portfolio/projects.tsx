@@ -9,17 +9,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "~/components/ui/carousel";
+import { getMeta } from "~/lib/meta";
 import { projects } from "~/utils";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content:
-        "Explore the projects created by Uriel Awe-Obe. Tech used included React, TypeScript, Tailwind CSS and other modern web technologies.",
-    },
-  ];
+  return getMeta({
+    page: "projects",
+    path: "/projects",
+    description:
+      "Explore the projects created by Uriel Awe-Obe. Tech used included React, TypeScript, Tailwind CSS and other modern web technologies.",
+  });
 }
 
 export default function Projects() {

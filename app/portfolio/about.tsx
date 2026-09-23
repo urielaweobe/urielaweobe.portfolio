@@ -1,14 +1,13 @@
 import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
+import { getMeta } from "~/lib/meta";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content: "Learn more about Uriel Awe-Obe's journey and experience.",
-    },
-  ];
+  return getMeta({
+    page: "about",
+    path: "/about",
+    description: "Learn more about Uriel Awe-Obe's journey and experience.",
+  });
 }
 
 export default function About() {

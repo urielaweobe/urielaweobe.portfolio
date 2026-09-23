@@ -1,17 +1,16 @@
 import { PiArrowUpRightThin } from "react-icons/pi";
 import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
+import { getMeta } from "~/lib/meta";
 import { certifications } from "~/utils";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content:
-        "Explore Uriel Awe-Obe's certifications and courses in frontend development.",
-    },
-  ];
+  return getMeta({
+    page: "certifications",
+    path: "/certifications",
+    description:
+      "Explore Uriel Awe-Obe's certifications and courses in frontend development.",
+  });
 }
 
 export default function Certifications() {

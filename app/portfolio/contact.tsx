@@ -1,16 +1,15 @@
 import { PiArrowUpRightThin } from "react-icons/pi";
 import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
+import { getMeta } from "~/lib/meta";
 import { socials } from "~/utils";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content: "Get in touch with Uriel Awe-Obe through the contact page.",
-    },
-  ];
+  return getMeta({
+    page: "connect",
+    path: "/contact",
+    description: "Get in touch with Uriel Awe-Obe through the contact page.",
+  });
 }
 
 export default function Contact() {

@@ -1,10 +1,11 @@
 import { Link } from "react-router";
+import { getMeta } from "~/lib/meta";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    { name: "description", content: "Welcome to Uriel Awe-Obe's portfolio!" },
-  ];
+  return getMeta({
+    path: "/",
+    description: "Welcome to Uriel Awe-Obe's portfolio!",
+  });
 }
 
 export default function Home() {
