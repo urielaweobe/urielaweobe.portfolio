@@ -1,21 +1,20 @@
 import { PiArrowUpRightThin } from "react-icons/pi";
 import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
+import { getMeta } from "~/lib/meta";
 import { socials } from "~/utils";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content: "Get in touch with Uriel Awe-Obe through the contact page.",
-    },
-  ];
+  return getMeta({
+    page: "connect",
+    path: "/contact",
+    description: "Get in touch with Uriel Awe-Obe through the contact page.",
+  });
 }
 
 export default function Contact() {
   return (
-    <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[500px] wrap-balance text-sm md:text-base lg:max-w-1/2">
         <BreadcrumbComponent
           className="mx-auto sm:mx-0"

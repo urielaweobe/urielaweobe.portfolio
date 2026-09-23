@@ -1,15 +1,16 @@
 import { Link } from "react-router";
+import { getMeta } from "~/lib/meta";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    { name: "description", content: "Welcome to Uriel Awe-Obe's portfolio!" },
-  ];
+  return getMeta({
+    path: "/",
+    description: "Welcome to Uriel Awe-Obe's portfolio!",
+  });
 }
 
 export default function Home() {
   return (
-    <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
         <p>
           Hi, I’m{" "}

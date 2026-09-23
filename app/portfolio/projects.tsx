@@ -9,17 +9,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "~/components/ui/carousel";
+import { getMeta } from "~/lib/meta";
 import { projects } from "~/utils";
 
 export function meta() {
-  return [
-    { title: "Uriel Awe-Obe" },
-    {
-      name: "description",
-      content:
-        "Explore the projects created by Uriel Awe-Obe. Tech used included React, TypeScript, Tailwind CSS and other modern web technologies.",
-    },
-  ];
+  return getMeta({
+    page: "projects",
+    path: "/projects",
+    description:
+      "Explore the projects created by Uriel Awe-Obe. Tech used included React, TypeScript, Tailwind CSS and other modern web technologies.",
+  });
 }
 
 export default function Projects() {
@@ -35,7 +34,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-125">
         {/* Desktop view */}
         <Carousel className="w-full  sm:inline hidden mx-auto">

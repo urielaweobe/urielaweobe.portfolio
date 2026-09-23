@@ -86,6 +86,13 @@ export const experiences = [
   },
 ];
 
+export const navLinks = [
+  { id: 1, name: "about", url: "/about" },
+  { id: 2, name: "career", url: "/experience" },
+  { id: 3, name: "projects", url: "/projects" },
+  { id: 4, name: "connect", url: "/contact" },
+];
+
 export const socials = [
   {
     id: 1,
