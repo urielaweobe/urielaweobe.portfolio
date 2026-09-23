@@ -46,7 +46,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="toggle dark mode"
       title="toggle dark mode"
-      className="cursor-pointer rounded-md p-1 transition-colors hover:bg-accent hover:text-accent-foreground"
+      className="cursor-pointer rounded-md -m-2 p-3 sm:m-0 sm:p-1 transition-colors hover:bg-accent hover:text-accent-foreground"
     >
       <LuSun className="hidden dark:block" />
       <LuMoon className="block dark:hidden" />
