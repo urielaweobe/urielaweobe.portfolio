@@ -42,14 +42,12 @@ export default function Experience() {
               </p>
 
               <Link
-                to={experience.url || ""}
+                to={experience.url}
                 target="_blank"
                 className="underline link-highlight font-semibold flex w-fit items-center group gap-x-1"
               >
                 {experience.domainName}
-                {experience.domainName && (
-                  <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
-                )}
+                <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
             </div>
           ))}

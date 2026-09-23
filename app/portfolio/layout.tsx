@@ -4,7 +4,7 @@ import { ThemeToggle } from "~/components/ThemeToggle";
 export default function Layout() {
   return (
     <div className="min-h-dvh flex flex-col">
-      <nav className="w-dvw flex items-center justify-between text-sm md:text-base px-3 mb-4 sm:mb-0">
+      <nav className="w-full flex items-center justify-between text-sm md:text-base px-3 mb-4 sm:mb-0">
         <NavLink to="/" className="link-highlight link-sweep py-1">
           urielaweobe
         </NavLink>
@@ -20,11 +20,9 @@ export default function Layout() {
         </ul>
       </nav>
       <main className="flex-1 overflow-auto">
-        <body>
-          <Outlet />
-        </body>
+        <Outlet />
       </main>
-      <footer className="w-dvw flex items-center justify-center text-sm md:text-base">
+      <footer className="w-full flex items-center justify-center text-sm md:text-base">
         <div className="flex items-center justify-center w-full max-w-xs">
           <div>
             <span>
