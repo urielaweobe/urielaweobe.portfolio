@@ -44,7 +44,7 @@ export default function Experience() {
               <Link
                 to={experience.url || ""}
                 target="_blank"
-                className="underline font-semibold flex items-center group "
+                className="underline link-highlight font-semibold flex w-fit items-center group gap-x-1"
               >
                 {experience.domainName}
                 {experience.domainName && (
@@ -57,7 +57,7 @@ export default function Experience() {
 
         <a
           href="https://drive.google.com/uc?export=download&id=1C4jxukLpoP9B_X5zRjQz5UzVdT3R5ygo"
-          className="group inline-flex items-center space-x-2 underline ml-auto mb-4"
+          className="group inline-flex items-center space-x-2 underline link-highlight ml-auto mb-4"
         >
           <span>download my cv</span>
           <PiDownloadSimple className="transition-transform duration-200 ease-in-out group-hover:translate-y-1" />

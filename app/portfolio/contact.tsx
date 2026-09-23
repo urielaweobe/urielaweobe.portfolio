@@ -30,11 +30,13 @@ export default function Contact() {
                 <Link
                   to={social.url}
                   target="_blank"
-                  className="flex hover:underline items-center group gap-x-1.5"
+                  className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
                   key={social.id}
                 >
-                  {social.name}{" "}
-                  <span className="hidden sm:inline">- {social.url}</span>
+                  <span className="link-sweep">
+                    {social.name}
+                    <span className="hidden sm:inline"> - {social.url}</span>
+                  </span>
                   <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
               ))}
