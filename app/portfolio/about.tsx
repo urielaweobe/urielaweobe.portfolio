@@ -28,7 +28,7 @@ export default function About() {
             who enjoys bringing digital ideas to life
           </p>
           <p>
-            <Link to="/experience" className="font-semibold underline">
+            <Link to="/experience" className="font-semibold underline link-highlight">
               My journey
             </Link>{" "}
             began with curiosity about how things work on the web, and over
@@ -38,7 +38,7 @@ export default function About() {
             <Link
               to="https://react.dev/"
               target="_blank"
-              className="underline font-semibold"
+              className="underline font-semibold link-highlight"
             >
               React
             </Link>
@@ -46,7 +46,7 @@ export default function About() {
             <Link
               to="https://nextjs.org/"
               target="_blank"
-              className="underline font-semibold"
+              className="underline font-semibold link-highlight"
             >
               Next.js
             </Link>
@@ -54,7 +54,7 @@ export default function About() {
             <Link
               to="https://remix.run/"
               target="_blank"
-              className="underline font-semibold"
+              className="underline font-semibold link-highlight"
             >
               Remix
             </Link>
@@ -62,7 +62,10 @@ export default function About() {
             with clean design.
           </p>
           <p>
-            <Link to="/contact" className="underline font-semibold">
+            <Link
+              to="/contact"
+              className="underline font-semibold link-highlight"
+            >
               Outside of work
             </Link>
             , I love exploring new tools, experimenting with UI animations, and
@@ -71,7 +74,10 @@ export default function About() {
 
           <p>
             I’ve also earned several{" "}
-            <Link to="/certifications" className="underline font-semibold">
+            <Link
+              to="/certifications"
+              className="underline font-semibold link-highlight"
+            >
               certifications
             </Link>{" "}
             to strengthen my skills and broaden my perspective as a frontend

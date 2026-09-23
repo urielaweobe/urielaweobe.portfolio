@@ -13,19 +13,19 @@ export default function Home() {
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
         <p>
           Hi, I’m{" "}
-          <Link to="/about" className="underline">
+          <Link to="/about" className="underline link-highlight">
             Uriel Awe-Obe
           </Link>
           , a <strong>Frontend Developer</strong>, turning complex ideas into
           smooth, engaging{" "}
-          <Link to="/projects" className="underline">
+          <Link to="/projects" className="underline link-highlight">
             web experiences
           </Link>
           .
         </p>
         <p>
           Currently{" "}
-          <Link to="/experience" className="underline">
+          <Link to="/experience" className="underline link-highlight">
             building
           </Link>{" "}
           at&nbsp;
@@ -33,7 +33,7 @@ export default function Home() {
             href="https://paystack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline font-bold"
+            className="underline font-bold link-highlight"
           >
             Paystack.
           </a>

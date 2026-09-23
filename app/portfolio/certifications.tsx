@@ -29,10 +29,10 @@ export default function Certifications() {
               <Link
                 to={certification.url}
                 target="_blank"
-                className="flex hover:underline items-center group gap-x-1.5"
+                className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
                 key={certification.id}
               >
-                {certification.name}
+                <span className="link-sweep">{certification.name}</span>
                 <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
             ))}

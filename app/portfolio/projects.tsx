@@ -54,10 +54,10 @@ export default function Projects() {
                   <Link
                     to={project.url}
                     target="_blank"
-                    className="flex hover:underline items-center group gap-x-1.5"
+                    className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
                     key={project.id}
                   >
-                    {project.domain}{" "}
+                    <span className="link-sweep">{project.domain}</span>
                     <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </Link>
                 </div>
@@ -87,10 +87,10 @@ export default function Projects() {
                     <Link
                       to={project.url}
                       target="_blank"
-                      className="flex hover:underline items-center group gap-x-1.5"
+                      className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
                       key={project.id}
                     >
-                      {project.domain}{" "}
+                      <span className="link-sweep">{project.domain}</span>
                       <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </Link>
                   </div>
