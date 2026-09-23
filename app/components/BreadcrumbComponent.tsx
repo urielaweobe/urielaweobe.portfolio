@@ -28,7 +28,7 @@ export function BreadcrumbComponent({
       <Breadcrumb className={className}>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink className="font-light">
+            <BreadcrumbLink asChild className="font-light">
               <Link
                 to={previousPageUrl || "/"}
                 className="flex items-center gap-1 group"
