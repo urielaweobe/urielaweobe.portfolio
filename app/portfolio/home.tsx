@@ -17,7 +17,7 @@ export default function Home() {
           <Link to="/about" className="underline link-highlight">
             Uriel Awe-Obe
           </Link>
-          , a <strong>Frontend Developer</strong>, turning complex ideas into
+          , a <strong>Frontend Engineer</strong>, turning complex ideas into
           smooth, engaging{" "}
           <Link to="/projects" className="underline link-highlight">
             web experiences

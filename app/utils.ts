@@ -127,7 +127,7 @@ export const projects = [
     title: "urielaweobe portfolio",
     description:
       "my personal portfolio website showcasing my projects, experience, and skills as a frontend developer.",
-    tech_used: "react, typescript, tailwind css, remix.",
+    tech_used: "react, typescript, tailwind css, react router.",
     url: "https://urielaweobe.com",
     domain: "visit portfolio",
     img: "/images/portfolio.png",
@@ -137,7 +137,7 @@ export const projects = [
     title: "stock-ai analysis tool",
     description:
       "a web application that uses AI to analyze stock market trends and provide investment insights.",
-    tech_used: "React, Mistral AI, Cloudflare, Typescript, Tailwind CSS.",
+    tech_used: "react, mistral ai, cloudflare, typescript, tailwind css.",
     url: "https://stock-ai-livid.vercel.app/",
     domain: "visit stock ai",
     img: "/images/stock-ai.png",
@@ -147,9 +147,7 @@ export const projects = [
     title: "employee handbook agent",
     description:
       "An AI-powered chatbot that helps employees quickly find information in the company handbook.",
-    tech_used: "React, Mistral AI, Node.js, Remix, Tailwind CSS, ShadCN.",
-    url: "#",
-    domain: "visit handbook agent",
+    tech_used: "react, mistral ai, node.js, remix, tailwind css, shadcn.",
     img: "/images/handbook-agent.png",
   },
 ];
