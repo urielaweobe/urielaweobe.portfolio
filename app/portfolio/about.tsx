@@ -13,14 +13,14 @@ export function meta() {
 
 export default function About() {
   return (
-    <section className="h-[calc(100dvh-55px)] overflow-auto flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-1/3">
         <BreadcrumbComponent
           previousPageUrl="/"
           previousPage="home"
           currentPage="about me"
         />
-        <div className="h-64 overflow-y-auto md:h-auto space-y-4">
+        <div className="space-y-4">
           <p>
             Hi, I’m <span className="font-semibold">Uriel Awe-Obe</span>, a
             curious problem-solver and&nbsp;

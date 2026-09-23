@@ -16,14 +16,14 @@ export function meta() {
 
 export default function Experience() {
   return (
-    <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-1/3  sm:mt-0">
         <BreadcrumbComponent
           currentPage="career"
           previousPage="about me"
           previousPageUrl="/about"
         />
-        <div className="h-64 overflow-y-auto md:h-auto">
+        <div>
           {experiences.map((experience) => (
             <div key={experience.id} className="space-y-2 mb-4">
               <h3 className="font-semibold">

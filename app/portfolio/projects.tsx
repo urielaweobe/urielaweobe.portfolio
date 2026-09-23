@@ -35,7 +35,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="h-[calc(100dvh-55px)] flex flex-row items-center justify-center">
+    <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs wrap-balance text-sm md:text-base lg:max-w-125">
         {/* Desktop view */}
         <Carousel className="w-full  sm:inline hidden mx-auto">

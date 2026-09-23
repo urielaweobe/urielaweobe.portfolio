@@ -19,7 +19,7 @@ export default function Layout() {
           </li>
         </ul>
       </nav>
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 flex items-center justify-center py-8">
         <Outlet />
       </main>
       <footer className="w-full flex items-center justify-center text-sm md:text-base">
