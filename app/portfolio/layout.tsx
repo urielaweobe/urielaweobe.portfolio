@@ -5,25 +5,25 @@ import { navLinks } from "~/utils";
 export default function Layout() {
   return (
     <div className="min-h-dvh flex flex-col">
-      <nav className="w-full flex items-center justify-between text-sm md:text-base px-3 mb-4 sm:mb-0">
-        <NavLink to="/" className="link-highlight link-sweep py-1">
+      <nav className="w-full flex flex-wrap items-center gap-x-3 text-sm md:text-base px-3 mb-4 sm:mb-0">
+        <NavLink to="/" className="link-highlight link-sweep py-2.5 sm:py-1">
           urielaweobe
         </NavLink>
-        <ul className="flex flex-wrap items-center justify-end gap-x-3">
+        <ul className="order-last w-full flex items-center justify-between sm:order-none sm:w-auto sm:ml-auto sm:gap-x-3">
           {navLinks.map((navLink) => (
             <li key={navLink.id}>
               <NavLink
                 to={navLink.url}
-                className="link-highlight link-sweep py-1 aria-[current=page]:font-semibold"
+                className="link-highlight link-sweep block py-2.5 sm:py-1 aria-[current=page]:font-semibold"
               >
                 {navLink.name}
               </NavLink>
             </li>
           ))}
-          <li className="flex items-center">
-            <ThemeToggle />
-          </li>
         </ul>
+        <div className="ml-auto flex items-center sm:ml-0">
+          <ThemeToggle />
+        </div>
       </nav>
       <main className="flex-1 flex items-center justify-center py-8">
         <Outlet />
