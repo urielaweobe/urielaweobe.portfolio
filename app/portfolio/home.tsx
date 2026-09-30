@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { KineticText, Letters } from "~/components/KineticText";
 import { getMeta, siteName, siteUrl } from "~/lib/meta";
 import { socials } from "~/utils";
 
@@ -30,35 +31,39 @@ export function meta() {
 export default function Home() {
   return (
     <section className="w-full flex flex-row justify-center">
-      <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
+      <KineticText className="flex flex-col w-full gap-6 max-w-xs text-3xl leading-tight font-light md:text-4xl lg:max-w-125">
         <h1>
-          Hi, I’m{" "}
+          <Letters text="Hi, I’m " />
           <Link to="/about" className="underline link-highlight">
-            Uriel Awe-Obe
+            <Letters text="Uriel Awe-Obe" />
           </Link>
-          , a <strong>Frontend Engineer</strong>, turning complex ideas into
-          smooth, engaging{" "}
+          <Letters text=", a " />
+          <strong className="font-bold">
+            <Letters text="Frontend Engineer" />
+          </strong>
+          <Letters text=", turning complex ideas into smooth, engaging " />
           <Link to="/projects" className="underline link-highlight">
-            web experiences
+            <Letters text="web experiences" />
           </Link>
-          .
+          <Letters text="." />
         </h1>
-        <p>
-          Currently{" "}
+        <p className="text-muted-foreground">
+          <Letters text="Currently " />
           <Link to="/experience" className="underline link-highlight">
-            building
-          </Link>{" "}
-          at&nbsp;
+            <Letters text="building" />
+          </Link>
+          <Letters text=" at " />
           <a
             href="https://paystack.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-bold link-highlight"
           >
-            Paystack.
+            <Letters text="Paystack" />
           </a>
+          <Letters text="." />
         </p>
-      </div>
+      </KineticText>
     </section>
   );
 }
