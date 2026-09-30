@@ -75,8 +75,12 @@ export default function About() {
           <p>
             Outside of work, I love exploring new tools, experimenting with UI
             animations, and occasionally writing about what I learn in frontend
-            development. Lately that means React Native, Flutter, and open
-            source when I can find the time.
+            development. Lately that means{" "}
+            <Link to="/projects" className="underline link-highlight">
+              building with AI
+            </Link>
+            , from a stock analysis tool to an employee handbook chatbot, both
+            powered by Mistral AI.
           </p>
           <p>
             I’ve also earned several{" "}
