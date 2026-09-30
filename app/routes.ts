@@ -13,5 +13,6 @@ export default [
     route("experience", "portfolio/experience.tsx"),
     route("projects", "portfolio/projects.tsx"),
     route("contact", "portfolio/contact.tsx"),
+    route("*", "portfolio/not-found.tsx"),
   ]),
 ] satisfies RouteConfig;

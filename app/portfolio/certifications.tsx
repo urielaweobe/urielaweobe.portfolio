@@ -1,6 +1,5 @@
-import { PiArrowUpRightThin } from "react-icons/pi";
-import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
+import { LinkIndex } from "~/components/LinkIndex";
 import { getMeta } from "~/lib/meta";
 import { certifications } from "~/utils";
 
@@ -16,27 +15,13 @@ export function meta() {
 export default function Certifications() {
   return (
     <section className="w-full flex flex-row justify-center">
-      <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
+      <div className="flex flex-col w-full gap-4 max-w-xs text-sm md:text-base lg:max-w-125">
         <BreadcrumbComponent
           currentPage="certifications & courses"
           previousPage="about me"
           previousPageUrl="/about"
         />
-        <ul className="mt-6">
-          <li className="space-y-2">
-            {certifications.map((certification) => (
-              <Link
-                to={certification.url}
-                target="_blank"
-                className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
-                key={certification.id}
-              >
-                <span className="link-sweep">{certification.name}</span>
-                <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </Link>
-            ))}
-          </li>
-        </ul>
+        <LinkIndex links={certifications} />
       </div>
     </section>
   );
