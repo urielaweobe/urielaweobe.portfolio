@@ -9,6 +9,7 @@ export default function Layout() {
       <nav className="relative w-full flex items-center gap-x-3 text-sm md:text-base px-3 mb-4 sm:mb-0">
         <NavLink
           to="/"
+          prefetch="intent"
           className="relative z-40 link-highlight link-sweep py-2.5 sm:py-1"
         >
           urielaweobe
@@ -18,6 +19,7 @@ export default function Layout() {
             <li key={navLink.id}>
               <NavLink
                 to={navLink.url}
+                prefetch="intent"
                 className="link-highlight link-sweep py-1 aria-[current=page]:font-semibold"
               >
                 {navLink.name}

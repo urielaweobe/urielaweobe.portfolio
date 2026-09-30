@@ -7,6 +7,7 @@ export function MobileNav() {
   const location = useLocation();
   const [openedOnKey, setOpenedOnKey] = useState<string | null>(null);
   const isOpen = openedOnKey === location.key;
+  const hasNavigatedAway = openedOnKey !== null && !isOpen;
   const [revealOrigin, setRevealOrigin] = useState("100% 0%");
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuId = useId();
@@ -76,7 +77,9 @@ export function MobileNav() {
           clipPath: `circle(${isOpen ? "150vmax" : "0px"} at ${revealOrigin})`,
         }}
         className={cn(
-          "fixed inset-0 z-30 flex flex-col justify-end bg-background/50 px-3 pb-16 backdrop-blur-md backdrop-saturate-150 motion-safe:transition-[clip-path,visibility] motion-safe:duration-500 motion-safe:ease-in-out",
+          "fixed inset-0 z-30 flex flex-col justify-end bg-background/50 px-3 pb-16 backdrop-blur-md backdrop-saturate-150",
+          !hasNavigatedAway &&
+            "motion-safe:transition-[clip-path,visibility] motion-safe:duration-500 motion-safe:ease-in-out",
           !isOpen && "invisible",
         )}
       >
@@ -94,6 +97,7 @@ export function MobileNav() {
             >
               <NavLink
                 to={navLink.url}
+                prefetch="render"
                 className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 py-5"
               >
                 <span className="text-xs tabular-nums text-muted-foreground">
