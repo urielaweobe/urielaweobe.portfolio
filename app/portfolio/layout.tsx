@@ -7,7 +7,10 @@ export default function Layout() {
   return (
     <div className="min-h-dvh flex flex-col">
       <nav className="relative w-full flex items-center gap-x-3 text-sm md:text-base px-3 mb-4 sm:mb-0">
-        <NavLink to="/" className="link-highlight link-sweep py-2.5 sm:py-1">
+        <NavLink
+          to="/"
+          className="relative z-40 link-highlight link-sweep py-2.5 sm:py-1"
+        >
           urielaweobe
         </NavLink>
         <ul className="hidden sm:flex items-center ml-auto gap-x-3">
