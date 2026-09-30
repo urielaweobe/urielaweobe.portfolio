@@ -260,9 +260,26 @@ body {}
 		background-size: 100% 1px;
 	}
 
+	.project-details {
+		interpolate-size: allow-keywords;
+	}
+
+	.project-details::details-content {
+		block-size: 0;
+		overflow: hidden;
+		transition:
+			block-size 300ms ease-out,
+			content-visibility 300ms allow-discrete;
+	}
+
+	.project-details[open]::details-content {
+		block-size: auto;
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.link-highlight,
-		.link-sweep {
+		.link-sweep,
+		.project-details::details-content {
 			transition: none;
 		}
 	}
