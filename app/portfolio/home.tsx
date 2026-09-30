@@ -1,18 +1,37 @@
 import { Link } from "react-router";
-import { getMeta } from "~/lib/meta";
+import { getMeta, siteName, siteUrl } from "~/lib/meta";
+import { socials } from "~/utils";
 
 export function meta() {
-  return getMeta({
-    path: "/",
-    description: "Welcome to Uriel Awe-Obe's portfolio!",
-  });
+  return [
+    ...getMeta({
+      path: "/",
+      description:
+        "Uriel Awe-Obe is a frontend engineer at Paystack, building fast, accessible web experiences with React, TypeScript and Remix.",
+    }),
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: siteName,
+        url: siteUrl,
+        jobTitle: "Frontend Engineer",
+        worksFor: {
+          "@type": "Organization",
+          name: "Paystack",
+          url: "https://paystack.com/",
+        },
+        sameAs: socials.map((social) => social.url),
+      },
+    },
+  ];
 }
 
 export default function Home() {
   return (
     <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs sm:w-[350px] wrap-balance text-sm md:text-base lg:max-w-1/3">
-        <p>
+        <h1>
           Hi, I’m{" "}
           <Link to="/about" className="underline link-highlight">
             Uriel Awe-Obe
@@ -23,7 +42,7 @@ export default function Home() {
             web experiences
           </Link>
           .
-        </p>
+        </h1>
         <p>
           Currently{" "}
           <Link to="/experience" className="underline link-highlight">

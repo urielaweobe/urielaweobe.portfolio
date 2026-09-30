@@ -130,7 +130,7 @@ export const projects = [
     tech_used: ["react", "typescript", "tailwind css", "react router"],
     url: "https://urielaweobe.com",
     domain: "visit portfolio",
-    img: "/images/portfolio.png",
+    img: "/images/portfolio.webp",
   },
   {
     id: 2,
@@ -140,7 +140,7 @@ export const projects = [
     tech_used: ["react", "mistral ai", "cloudflare", "typescript", "tailwind css"],
     url: "https://stock-ai-livid.vercel.app/",
     domain: "visit stock ai",
-    img: "/images/stock-ai.png",
+    img: "/images/stock-ai.webp",
   },
   {
     id: 3,
@@ -148,6 +148,6 @@ export const projects = [
     description:
       "An AI-powered chatbot that helps employees quickly find information in the company handbook.",
     tech_used: ["react", "mistral ai", "node.js", "remix", "tailwind css", "shadcn"],
-    img: "/images/handbook-agent.png",
+    img: "/images/handbook-agent.webp",
   },
 ];

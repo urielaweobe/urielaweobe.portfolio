@@ -64,9 +64,9 @@ export default function Projects() {
                   <span className="text-xs tabular-nums text-muted-foreground">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="text-xl font-medium leading-tight md:text-2xl lg:text-3xl motion-safe:transition-transform motion-safe:duration-300 group-hover/row:translate-x-2">
+                  <h2 className="text-xl font-medium leading-tight md:text-2xl lg:text-3xl motion-safe:transition-transform motion-safe:duration-300 group-hover/row:translate-x-2">
                     {project.title}
-                  </h3>
+                  </h2>
                   <PiPlusThin
                     aria-hidden
                     className="size-5 self-center motion-safe:transition-transform motion-safe:duration-300 group-open/row:rotate-45"
@@ -80,8 +80,8 @@ export default function Projects() {
                   <img
                     src={project.img}
                     alt={`${project.title} screenshot`}
-                    width={2880}
-                    height={1934}
+                    width={1440}
+                    height={967}
                     loading="lazy"
                     className="w-full h-auto rounded-lg border pointer-fine:hidden"
                   />
@@ -114,8 +114,8 @@ export default function Projects() {
             key={project.id}
             src={project.img}
             alt=""
-            width={2880}
-            height={1934}
+            width={1440}
+            height={967}
             className={cn(
               "col-start-1 row-start-1 w-full h-auto motion-safe:transition-opacity motion-safe:duration-300",
               project.id !== previewedId && "opacity-0",
