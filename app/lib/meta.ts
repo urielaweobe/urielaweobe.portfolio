@@ -1,5 +1,5 @@
 export const siteName = "Uriel Awe-Obe";
-const siteUrl = "https://urielaweobe.com";
+export const siteUrl = "https://urielaweobe.com";
 
 type MetaInput = {
   page?: string;
@@ -8,9 +8,12 @@ type MetaInput = {
 };
 
 export function getMeta({ page, path, description }: MetaInput) {
-  const title = page ? `${page} — ${siteName}` : siteName;
+  const title = page
+    ? `${page} — ${siteName}`
+    : `${siteName} — Frontend Engineer at Paystack`;
   const url = `${siteUrl}${path}`;
   const image = `${siteUrl}/og.png`;
+  const imageAlt = `${siteName}, Frontend Engineer, turning complex ideas into smooth, engaging web experiences.`;
 
   return [
     { title },
@@ -22,8 +25,12 @@ export function getMeta({ page, path, description }: MetaInput) {
     { property: "og:description", content: description },
     { property: "og:url", content: url },
     { property: "og:image", content: image },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:image:alt", content: imageAlt },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:site", content: "@urielaweobe" },
     { name: "twitter:image", content: image },
+    { name: "twitter:image:alt", content: imageAlt },
   ];
 }

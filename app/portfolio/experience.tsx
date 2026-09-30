@@ -25,9 +25,9 @@ export default function Experience() {
         <div>
           {experiences.map((experience) => (
             <div key={experience.id} className="space-y-2 mb-4">
-              <h3 className="font-semibold">
+              <h2 className="font-semibold">
                 {experience.company} - {experience.role}
-              </h3>
+              </h2>
               <p className="text-sm font-light">{experience.period}</p>
 
               <p className="text-sm md:text-base">

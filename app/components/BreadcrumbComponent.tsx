@@ -42,9 +42,11 @@ export function BreadcrumbComponent({
             <SlashIcon />
           </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbPage className="font-semibold">
-              {currentPage}
-            </BreadcrumbPage>
+            <h1>
+              <BreadcrumbPage className="font-semibold">
+                {currentPage}
+              </BreadcrumbPage>
+            </h1>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
