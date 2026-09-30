@@ -6,7 +6,7 @@ import { navLinks } from "~/utils";
 export default function Layout() {
   return (
     <div className="min-h-dvh flex flex-col">
-      <nav className="relative w-full flex items-center gap-x-3 text-sm md:text-base px-3 mb-4 sm:mb-0">
+      <nav className="sticky top-0 z-30 w-full flex items-center gap-x-3 bg-background text-sm md:text-base px-3 mb-4 sm:mb-0 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-8 after:bg-linear-to-b after:from-background after:to-transparent">
         <NavLink
           to="/"
           className="relative z-40 link-highlight link-sweep py-2.5 sm:py-1"
@@ -33,7 +33,7 @@ export default function Layout() {
       <main className="flex-1 flex items-center justify-center py-8">
         <Outlet />
       </main>
-      <footer className="w-full flex items-center justify-center text-sm md:text-base">
+      <footer className="sticky bottom-0 z-20 w-full flex items-center justify-center bg-background py-2 text-sm md:text-base before:pointer-events-none before:absolute before:inset-x-0 before:bottom-full before:h-8 before:bg-linear-to-t before:from-background before:to-transparent">
         <div className="flex items-center justify-center w-full max-w-xs">
           <div>
             <span>
