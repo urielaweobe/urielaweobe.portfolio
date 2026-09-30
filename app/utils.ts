@@ -54,35 +54,46 @@ export const certifications = [
 export const experiences = [
   {
     id: 1,
-    role: "frontend engineer",
     company: "paystack",
-    period: "feb 2023 – present",
-    description: {
-      line_one:
-        "I currently work at Paystack, where I build and maintain fast, accessible, and delightful web experiences for merchants across Africa.",
-      line_two:
-        "My work cuts across performance optimization, UI architecture, and accessibility, from improving onboarding experiences that reduced drop-offs by 18%, to architecting reusable component libraries that improved team development speed by 20%.",
-      line_three:
-        "I also mentor junior engineers and collaborate closely with designers and backend developers to deliver products that feel cohesive and reliable.",
-    },
-    domainName: "paystack.com",
     url: "https://paystack.com/",
+    roles: [
+      {
+        id: 1,
+        title: "frontend engineer",
+        period: "feb 2024 – present",
+        highlights: [
+          "Developed merchant-facing user interfaces for financial systems using React and TypeScript, with shipped features now serving 200,000+ merchants.",
+          "Reviewed 10+ pull requests per sprint and helped reduce post-merge bugs by around 30% through consistent code review.",
+          "Supported junior engineers through pairing and documentation, reducing onboarding time by a few weeks.",
+        ],
+      },
+      {
+        id: 2,
+        title: "frontend engineer, contract",
+        period: "feb 2023 – feb 2024",
+        highlights: [
+          "Built and localized the product for Ghana, Kenya, Egypt, and Côte d'Ivoire, handling localization edge cases and cross-market testing across the frontend.",
+          "Six months after launch in those markets, the product had gained around 50,000 new users, indicating that the localization work effectively supported regional growth.",
+          "Kept a 95%+ code review pass rate throughout the contract.",
+        ],
+      },
+    ],
   },
   {
     id: 2,
-    role: "frontend engineer",
     company: "buzzz",
-    period: "jun 2022 – feb 2023",
-    description: {
-      line_one:
-        "At Buzzz, I built scalable React applications and optimized user interfaces for better performance and mobile responsiveness.",
-      line_two:
-        "I collaborated closely with UI/UX designers to turn Figma prototypes into pixel-perfect, accessible interfaces.",
-      line_three:
-        "One highlight was leading frontend optimization efforts that increased mobile session duration by 35% and improved Core Web Vitals across the app.",
-    },
-    domainName: "yourbuzzz.com",
     url: "https://www.yourbuzzz.com/",
+    roles: [
+      {
+        id: 3,
+        title: "frontend developer",
+        period: "jun 2022 – feb 2023",
+        highlights: [
+          "Wired up 8+ REST endpoints using React Query — load times dropped by around 40% once I replaced the old fetch logic.",
+          "Built 15+ responsive components with the designer; merge conflicts dropped by 60% after I set up a proper branching process.",
+        ],
+      },
+    ],
   },
 ];
 
