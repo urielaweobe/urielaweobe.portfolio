@@ -1,10 +1,12 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { cn } from "~/lib/utils";
 import { navLinks } from "~/utils";
 
 export function MobileNav() {
-  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const [openedOnKey, setOpenedOnKey] = useState<string | null>(null);
+  const isOpen = openedOnKey === location.key;
   const [revealOrigin, setRevealOrigin] = useState("100% 0%");
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuId = useId();
@@ -12,11 +14,11 @@ export function MobileNav() {
   useEffect(() => {
     if (!isOpen) return;
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") setOpenedOnKey(null);
     };
     const wideScreen = window.matchMedia("(min-width: 40rem)");
     const onWiden = (event: MediaQueryListEvent) => {
-      if (event.matches) setIsOpen(false);
+      if (event.matches) setOpenedOnKey(null);
     };
 
     document.addEventListener("keydown", onKeyDown);
@@ -35,7 +37,7 @@ export function MobileNav() {
       const { left, top, width, height } = button.getBoundingClientRect();
       setRevealOrigin(`${left + width / 2}px ${top + height / 2}px`);
     }
-    setIsOpen(!isOpen);
+    setOpenedOnKey(isOpen ? null : location.key);
   };
 
   return (
@@ -92,7 +94,6 @@ export function MobileNav() {
             >
               <NavLink
                 to={navLink.url}
-                onClick={() => setIsOpen(false)}
                 className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 py-5"
               >
                 <span className="text-xs tabular-nums text-muted-foreground">
