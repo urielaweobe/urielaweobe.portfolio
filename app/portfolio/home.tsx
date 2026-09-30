@@ -31,7 +31,7 @@ export function meta() {
 export default function Home() {
   return (
     <section className="w-full flex flex-row justify-center">
-      <KineticText className="flex flex-col w-full gap-6 max-w-xs text-3xl leading-tight font-light md:text-4xl lg:max-w-125">
+      <KineticText className="flex flex-col w-full gap-6 max-w-xs text-xl leading-snug font-light md:text-2xl lg:max-w-125">
         <h1>
           <Letters text="Hi, I’m " />
           <Link to="/about" className="underline link-highlight">

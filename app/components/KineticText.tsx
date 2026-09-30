@@ -2,7 +2,7 @@ import { type ReactNode, useEffect, useRef } from "react";
 import { cn } from "~/lib/utils";
 
 const BOLD_WEIGHT = 700;
-const REACH_PX = 120;
+const REACH_PX = 90;
 const WAVE_REACH_LETTERS = 6;
 const IDLE_AFTER_MS = 2500;
 const WAVE_MS = 3200;
