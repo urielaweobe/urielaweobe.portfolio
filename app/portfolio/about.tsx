@@ -24,7 +24,7 @@ export default function About() {
             Hi, I’m <span className="font-semibold">Uriel Awe-Obe</span>, a
             curious problem-solver and&nbsp;
             <span className="font-semibold">Frontend Engineer&nbsp;</span>
-            who enjoys bringing digital ideas to life
+            who enjoys bringing digital ideas to life.
           </p>
           <p>
             <Link to="/experience" className="font-semibold underline link-highlight">
@@ -68,7 +68,7 @@ export default function About() {
               Outside of work
             </Link>
             , I love exploring new tools, experimenting with UI animations, and
-            occasionally writing about what I learn in frontend development
+            occasionally writing about what I learn in frontend development.
           </p>
 
           <p>

@@ -56,7 +56,7 @@ export const experiences = [
     id: 1,
     role: "frontend engineer",
     company: "paystack",
-    period: "feb 2023 - present",
+    period: "feb 2023 – present",
     description: {
       line_one:
         "I currently work at Paystack, where I build and maintain fast, accessible, and delightful web experiences for merchants across Africa.",

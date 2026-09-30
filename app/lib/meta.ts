@@ -1,4 +1,4 @@
-const siteName = "Uriel Awe-Obe";
+export const siteName = "Uriel Awe-Obe";
 const siteUrl = "https://urielaweobe.com";
 
 type MetaInput = {
