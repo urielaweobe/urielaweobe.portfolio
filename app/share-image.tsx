@@ -1,7 +1,5 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { Resvg } from "@resvg/resvg-js";
-import satori from "satori";
 import { shareCards } from "~/lib/share-cards";
 import type { Route } from "./+types/share-image";
 
@@ -13,7 +11,9 @@ export async function loader({ params }: Route.LoaderArgs) {
   const card = shareCards[params["*"]?.replace(/\.png$/, "") ?? ""];
   if (!card) return new Response("Not found", { status: 404 });
 
-  const [regular, bold] = await Promise.all([
+  const [{ Resvg }, { default: satori }, regular, bold] = await Promise.all([
+    import("@resvg/resvg-js"),
+    import("satori"),
     readFile(join(fontsDirectory, "Quicksand-Regular.ttf")),
     readFile(join(fontsDirectory, "Quicksand-Bold.ttf")),
   ]);
