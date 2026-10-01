@@ -2,7 +2,13 @@ import { PiArrowUpRightThin } from "react-icons/pi";
 import { Link } from "react-router";
 
 type LinkIndexProps = {
-  links: { id: number; name: string; url: string; detail?: string }[];
+  links: {
+    id: number;
+    name: string;
+    url: string;
+    detail?: string;
+    target?: string;
+  }[];
 };
 
 export function LinkIndex({ links }: LinkIndexProps) {
@@ -15,7 +21,7 @@ export function LinkIndex({ links }: LinkIndexProps) {
         >
           <Link
             to={link.url}
-            target="_blank"
+            target={link.target ?? "_blank"}
             className="group/row grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 gap-y-1 py-4 outline-offset-4"
           >
             <span className="text-xs tabular-nums text-muted-foreground">

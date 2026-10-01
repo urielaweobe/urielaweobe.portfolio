@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { getMeta, siteName, siteUrl } from "~/lib/meta";
-import { socials } from "~/utils";
+import { email, socials } from "~/utils";
 
 export function meta() {
   return [
@@ -16,6 +16,7 @@ export function meta() {
         name: siteName,
         url: siteUrl,
         jobTitle: "Frontend Engineer",
+        email,
         worksFor: {
           "@type": "Organization",
           name: "Paystack",
