@@ -98,6 +98,7 @@ export function MobileNav() {
               <NavLink
                 to={navLink.url}
                 prefetch="render"
+                viewTransition
                 className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 py-5"
               >
                 <span className="text-xs tabular-nums text-muted-foreground">

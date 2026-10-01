@@ -36,6 +36,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
       <article className="flex flex-col w-full gap-4 max-w-xs text-sm md:text-base lg:max-w-125">
         <BreadcrumbComponent
           currentPage={project.title}
+          headingTransitionName="project-title"
           previousPage="projects"
           previousPageUrl="/projects"
         />
@@ -47,6 +48,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
           alt={`${project.title} screenshot`}
           width={1440}
           height={967}
+          style={{ viewTransitionName: "project-shot" }}
           className="w-full h-auto rounded-lg border"
         />
 
@@ -102,6 +104,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
         <Link
           to={`/projects/${nextProject.slug}`}
           prefetch="intent"
+          viewTransition
           className="group mt-6 flex items-baseline justify-between gap-x-4 border-t pt-4"
         >
           <span className="text-xs text-muted-foreground md:text-sm">next</span>

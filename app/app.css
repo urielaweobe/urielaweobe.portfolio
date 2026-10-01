@@ -279,11 +279,34 @@ body {}
 		block-size: auto;
 	}
 
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation-duration: 200ms;
+	}
+
+	::view-transition-group(project-title),
+	::view-transition-group(project-shot) {
+		animation-duration: 400ms;
+		animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+	}
+
+	::view-transition-old(project-title),
+	::view-transition-new(project-title) {
+		width: auto;
+		height: 100%;
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.link-highlight,
 		.link-sweep,
 		.project-details::details-content {
 			transition: none;
+		}
+
+		::view-transition-group(*),
+		::view-transition-old(*),
+		::view-transition-new(*) {
+			animation: none;
 		}
 	}
 }
