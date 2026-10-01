@@ -33,19 +33,27 @@ export default function Home() {
       <div className="flex flex-col w-full gap-6 max-w-xs text-xl leading-snug font-light md:text-2xl lg:max-w-125">
         <h1>
           Hi, I’m{" "}
-          <Link to="/about" className="underline link-highlight">
+          <Link to="/about" viewTransition className="underline link-highlight">
             Uriel Awe-Obe
           </Link>
           , a <strong className="font-bold">Frontend Engineer</strong>, turning
           complex ideas into smooth, engaging{" "}
-          <Link to="/projects" className="underline link-highlight">
+          <Link
+            to="/projects"
+            viewTransition
+            className="underline link-highlight"
+          >
             web experiences
           </Link>
           .
         </h1>
         <p className="text-muted-foreground">
           Currently{" "}
-          <Link to="/experience" className="underline link-highlight">
+          <Link
+            to="/experience"
+            viewTransition
+            className="underline link-highlight"
+          >
             building
           </Link>{" "}
           at{" "}

@@ -39,7 +39,11 @@ export default function About() {
             200,000+ businesses across Africa.
           </p>
           <p>
-            <Link to="/experience" className="underline link-highlight">
+            <Link
+              to="/experience"
+              viewTransition
+              className="underline link-highlight"
+            >
               My journey
             </Link>{" "}
             began with curiosity about how things work on the web, and over
@@ -76,7 +80,11 @@ export default function About() {
             Outside of work, I love exploring new tools, experimenting with UI
             animations, and occasionally writing about what I learn in frontend
             development. Lately that means{" "}
-            <Link to="/projects" className="underline link-highlight">
+            <Link
+              to="/projects"
+              viewTransition
+              className="underline link-highlight"
+            >
               building with AI
             </Link>
             , from a stock analysis tool to an employee handbook chatbot, both
@@ -84,7 +92,11 @@ export default function About() {
           </p>
           <p>
             I’ve also earned several{" "}
-            <Link to="/certifications" className="underline link-highlight">
+            <Link
+              to="/certifications"
+              viewTransition
+              className="underline link-highlight"
+            >
               certifications
             </Link>{" "}
             to strengthen my skills and broaden my perspective as a frontend
@@ -92,7 +104,11 @@ export default function About() {
           </p>
           <p>
             Want to build something together?{" "}
-            <Link to="/contact" className="underline link-highlight">
+            <Link
+              to="/contact"
+              viewTransition
+              className="underline link-highlight"
+            >
               Let’s connect
             </Link>
             .
