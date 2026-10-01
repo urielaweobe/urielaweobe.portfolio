@@ -8,6 +8,14 @@ function applyTheme(isDark: boolean) {
   document.documentElement.style.colorScheme = isDark ? "dark" : "light";
 }
 
+export function toggleTheme() {
+  const isDark = !document.documentElement.classList.contains("dark");
+  applyTheme(isDark);
+  try {
+    localStorage.setItem(STORAGE_KEY, isDark ? "dark" : "light");
+  } catch {}
+}
+
 export const themeScript = `
 (function () {
   try {
@@ -32,18 +40,10 @@ export function ThemeToggle() {
     return () => query.removeEventListener("change", onChange);
   }, []);
 
-  const toggle = () => {
-    const isDark = !document.documentElement.classList.contains("dark");
-    applyTheme(isDark);
-    try {
-      localStorage.setItem(STORAGE_KEY, isDark ? "dark" : "light");
-    } catch {}
-  };
-
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={toggleTheme}
       aria-label="toggle dark mode"
       title="toggle dark mode"
       className="relative z-40 cursor-pointer rounded-md -m-2 p-3 sm:m-0 sm:p-1 transition-colors hover:bg-accent hover:text-accent-foreground"
