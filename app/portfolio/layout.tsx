@@ -1,10 +1,29 @@
+import type { ReactNode } from "react";
 import { Link, NavLink, Outlet } from "react-router";
 import { CommandMenu } from "~/components/CommandMenu";
+import { ErrorMessage } from "~/components/ErrorMessage";
 import { MobileNav } from "~/components/MobileNav";
 import { ThemeToggle } from "~/components/ThemeToggle";
 import { navLinks } from "~/utils";
+import type { Route } from "./+types/layout";
 
 export default function Layout() {
+  return (
+    <SiteShell>
+      <Outlet />
+    </SiteShell>
+  );
+}
+
+export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+  return (
+    <SiteShell>
+      <ErrorMessage error={error} />
+    </SiteShell>
+  );
+}
+
+function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-dvh flex flex-col">
       <nav className="sticky top-0 z-30 w-full flex items-center gap-x-3 bg-background text-sm md:text-base px-3 mb-4 sm:mb-0 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-8 after:bg-linear-to-b after:from-background after:to-transparent">
@@ -37,7 +56,7 @@ export default function Layout() {
         </div>
       </nav>
       <main className="flex-1 flex items-center justify-center py-8">
-        <Outlet />
+        {children}
       </main>
       <footer className="sticky bottom-0 z-20 w-full flex items-center justify-center bg-background py-2 text-sm md:text-base before:pointer-events-none before:absolute before:inset-x-0 before:bottom-full before:h-8 before:bg-linear-to-t before:from-background before:to-transparent">
         <div className="flex items-center justify-center w-full max-w-xs">
