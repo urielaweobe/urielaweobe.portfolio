@@ -1,7 +1,7 @@
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
 import { LinkIndex } from "~/components/LinkIndex";
 import { getMeta } from "~/lib/meta";
-import { socials } from "~/utils";
+import { email, socials } from "~/utils";
 
 export function meta() {
   return getMeta({
@@ -21,12 +21,21 @@ export default function Contact() {
           currentPage="connect"
         />
         <LinkIndex
-          links={socials.map((social) => ({
-            ...social,
-            detail: social.url
-              .replace(/^https:\/\/(www\.)?/, "")
-              .replace(/\/$/, ""),
-          }))}
+          links={[
+            {
+              id: 0,
+              name: "email",
+              url: `mailto:${email}`,
+              detail: email,
+              target: "_self",
+            },
+            ...socials.map((social) => ({
+              ...social,
+              detail: social.url
+                .replace(/^https:\/\/(www\.)?/, "")
+                .replace(/\/$/, ""),
+            })),
+          ]}
         />
       </div>
     </section>

@@ -3,7 +3,7 @@ import { LuSearch } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { toggleTheme } from "~/components/ThemeToggle";
 import { cn } from "~/lib/utils";
-import { navLinks, projects, socials } from "~/utils";
+import { email, navLinks, projects, socials } from "~/utils";
 
 type Command = {
   id: string;
@@ -42,6 +42,15 @@ export function CommandMenu() {
       run: () =>
         navigate(`/projects/${project.slug}`, { viewTransition: true }),
     })),
+    {
+      id: "email",
+      group: "elsewhere",
+      label: "email",
+      hint: email,
+      run: () => {
+        window.location.href = `mailto:${email}`;
+      },
+    },
     ...socials.map((social) => ({
       id: `social-${social.name}`,
       group: "elsewhere",

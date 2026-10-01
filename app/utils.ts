@@ -104,6 +104,8 @@ export const navLinks = [
   { id: 4, name: "connect", url: "/contact" },
 ];
 
+export const email = "urielaweobe@gmail.com";
+
 export const socials = [
   {
     id: 1,
