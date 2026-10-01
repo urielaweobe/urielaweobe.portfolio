@@ -12,6 +12,7 @@ export default [
     route("certifications", "portfolio/certifications.tsx"),
     route("experience", "portfolio/experience.tsx"),
     route("projects", "portfolio/projects.tsx"),
+    route("projects/:slug", "portfolio/project.tsx"),
     route("contact", "portfolio/contact.tsx"),
     route("*", "portfolio/not-found.tsx"),
   ]),

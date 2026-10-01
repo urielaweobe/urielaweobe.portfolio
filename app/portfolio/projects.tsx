@@ -1,5 +1,9 @@
 import { useRef, useState } from "react";
-import { PiArrowUpRightThin, PiPlusThin } from "react-icons/pi";
+import {
+  PiArrowRightThin,
+  PiArrowUpRightThin,
+  PiPlusThin,
+} from "react-icons/pi";
 import { Link } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
 import { getMeta } from "~/lib/meta";
@@ -85,16 +89,26 @@ export default function Projects() {
                     loading="lazy"
                     className="w-full h-auto rounded-lg border pointer-fine:hidden"
                   />
-                  {project.url && (
+                  <div className="flex flex-wrap gap-x-6 gap-y-2">
                     <Link
-                      to={project.url}
-                      target="_blank"
-                      className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
+                      to={`/projects/${project.slug}`}
+                      prefetch="intent"
+                      className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5 font-semibold"
                     >
-                      <span className="link-sweep">{project.domain}</span>
-                      <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <span className="link-sweep">read the case study</span>
+                      <PiArrowRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
                     </Link>
-                  )}
+                    {project.url && (
+                      <Link
+                        to={project.url}
+                        target="_blank"
+                        className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5"
+                      >
+                        <span className="link-sweep">{project.domain}</span>
+                        <PiArrowUpRightThin className="transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </details>
             </li>
