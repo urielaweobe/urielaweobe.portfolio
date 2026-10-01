@@ -32,14 +32,15 @@ export function CommandMenu() {
       group: "pages",
       label: page.name,
       hint: page.url,
-      run: () => navigate(page.url),
+      run: () => navigate(page.url, { viewTransition: true }),
     })),
     ...projects.map((project) => ({
       id: `project-${project.slug}`,
       group: "case studies",
       label: project.title,
       hint: project.tech_used.slice(0, 2).join(" · "),
-      run: () => navigate(`/projects/${project.slug}`),
+      run: () =>
+        navigate(`/projects/${project.slug}`, { viewTransition: true }),
     })),
     ...socials.map((social) => ({
       id: `social-${social.name}`,

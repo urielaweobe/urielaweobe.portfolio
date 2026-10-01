@@ -11,6 +11,7 @@ export default function Layout() {
         <NavLink
           to="/"
           prefetch="intent"
+          viewTransition
           className="relative z-40 link-highlight link-sweep py-2.5 sm:py-1"
         >
           urielaweobe
@@ -21,6 +22,7 @@ export default function Layout() {
               <NavLink
                 to={navLink.url}
                 prefetch="intent"
+                viewTransition
                 className="link-highlight link-sweep py-1 aria-[current=page]:font-semibold"
               >
                 {navLink.name}
@@ -42,7 +44,7 @@ export default function Layout() {
           <div>
             <span>
               © {new Date().getFullYear()} -{" "}
-              <Link to="/contact" className="font-normal">
+              <Link to="/contact" viewTransition className="font-normal">
                 urielaweobe
               </Link>
             </span>

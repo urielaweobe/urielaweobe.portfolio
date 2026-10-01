@@ -12,6 +12,7 @@ import {
 
 type BreadcrumbProps = {
   currentPage: string;
+  headingTransitionName?: string;
   className?: string;
   previousPageUrl?: string;
   previousPage?: string;
@@ -19,6 +20,7 @@ type BreadcrumbProps = {
 
 export function BreadcrumbComponent({
   currentPage,
+  headingTransitionName,
   className,
   previousPageUrl,
   previousPage,
@@ -31,6 +33,7 @@ export function BreadcrumbComponent({
             <BreadcrumbLink asChild className="font-light">
               <Link
                 to={previousPageUrl || "/"}
+                viewTransition
                 className="flex items-center gap-1 group"
               >
                 <CgArrowLongLeft className="transition-transform duration-200 ease-in-out group-hover:-translate-x-1" />
@@ -42,7 +45,7 @@ export function BreadcrumbComponent({
             <SlashIcon />
           </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <h1>
+            <h1 style={{ viewTransitionName: headingTransitionName }}>
               <BreadcrumbPage className="font-semibold">
                 {currentPage}
               </BreadcrumbPage>

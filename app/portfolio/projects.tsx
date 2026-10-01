@@ -4,7 +4,7 @@ import {
   PiArrowUpRightThin,
   PiPlusThin,
 } from "react-icons/pi";
-import { Link } from "react-router";
+import { Link, useNavigation } from "react-router";
 import { BreadcrumbComponent } from "~/components/BreadcrumbComponent";
 import { getMeta } from "~/lib/meta";
 import { cn } from "~/lib/utils";
@@ -25,6 +25,9 @@ const VIEWPORT_GUTTER = 16;
 export default function Projects() {
   const [previewedId, setPreviewedId] = useState<number | null>(null);
   const previewRef = useRef<HTMLDivElement>(null);
+  const navigation = useNavigation();
+  const isOpening = (slug: string) =>
+    navigation.location?.pathname === `/projects/${slug}`;
 
   const followCursor = (event: React.PointerEvent) => {
     const preview = previewRef.current;
@@ -68,7 +71,12 @@ export default function Projects() {
                   <span className="text-xs tabular-nums text-muted-foreground">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h2 className="text-xl font-medium leading-tight md:text-2xl lg:text-3xl motion-safe:transition-transform motion-safe:duration-300 group-hover/row:translate-x-2">
+                  <h2
+                    style={{
+                      viewTransitionName:
+                        isOpening(project.slug) ? "project-title" : undefined,
+                    }}
+                    className="justify-self-start text-xl font-medium leading-tight md:text-2xl lg:text-3xl motion-safe:transition-transform motion-safe:duration-300 group-hover/row:translate-x-2">
                     {project.title}
                   </h2>
                   <PiPlusThin
@@ -87,12 +95,17 @@ export default function Projects() {
                     width={1440}
                     height={967}
                     loading="lazy"
+                    style={{
+                      viewTransitionName:
+                        isOpening(project.slug) ? "project-shot" : undefined,
+                    }}
                     className="w-full h-auto rounded-lg border pointer-fine:hidden"
                   />
                   <div className="flex flex-wrap gap-x-6 gap-y-2">
                     <Link
                       to={`/projects/${project.slug}`}
                       prefetch="intent"
+                      viewTransition
                       className="link-highlight flex w-fit items-center group gap-x-1.5 py-0.5 font-semibold"
                     >
                       <span className="link-sweep">read the case study</span>
@@ -130,6 +143,10 @@ export default function Projects() {
             alt=""
             width={1440}
             height={967}
+            style={{
+              viewTransitionName:
+                isOpening(project.slug) ? "project-shot" : undefined,
+            }}
             className={cn(
               "col-start-1 row-start-1 w-full h-auto motion-safe:transition-opacity motion-safe:duration-300",
               project.id !== previewedId && "opacity-0",
