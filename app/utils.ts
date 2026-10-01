@@ -135,30 +135,120 @@ export const socials = [
 export const projects = [
   {
     id: 1,
+    slug: "portfolio",
     title: "urielaweobe portfolio",
     description:
       "my personal portfolio website showcasing my projects, experience, and skills as a frontend developer.",
     tech_used: ["react", "typescript", "tailwind css", "react router"],
     url: "https://urielaweobe.com",
     domain: "visit portfolio",
+    repo: "https://github.com/urielaweobe/urielaweobe.portfolio",
     img: "/images/portfolio.webp",
+    caseStudy: {
+      problem:
+        "The projects page stacked identical cards, so every project carried the same weight and the site read like a document. I wanted the work to be quick to scan on a phone, memorable on a desktop, and easy for search engines to understand.",
+      decisions: [
+        {
+          id: 1,
+          title: "an index instead of cards",
+          detail:
+            "Projects became numbered rows. With a mouse, hovering a row floats its screenshot beside the cursor; on touch, rows open in place as native details elements. Pointer media queries decide which, rather than guessing from the device.",
+        },
+        {
+          id: 2,
+          title: "every page prerendered",
+          detail:
+            "React Router renders each page to static HTML at build time, each with its own title, canonical URL and share card, plus schema.org data on the home page describing who I am and where I work.",
+        },
+        {
+          id: 3,
+          title: "navigation that never waits",
+          detail:
+            "The phone menu's open state is tied to the current location, so any navigation closes it the moment the next page appears, and the pages it links to are prefetched before you tap.",
+        },
+        {
+          id: 4,
+          title: "lighter screenshots",
+          detail:
+            "The 2880px PNG screenshots became 1440px WebP, still sharper than any size they're shown at.",
+        },
+      ],
+      outcome:
+        "Screenshots dropped from 741 KB to 73 KB. In testing on a CPU slowed to phone speed, tapping a menu link shows the next page in under 50 ms with nothing left to download.",
+    },
   },
   {
     id: 2,
+    slug: "stock-ai",
     title: "stock-ai analysis tool",
     description:
       "a web application that uses AI to analyze stock market trends and provide investment insights.",
     tech_used: ["react", "mistral ai", "cloudflare", "typescript", "tailwind css"],
     url: "https://stock-ai-livid.vercel.app/",
     domain: "visit stock ai",
+    repo: "https://github.com/urielaweobe/stock-ai",
     img: "/images/stock-ai.webp",
+    caseStudy: {
+      problem:
+        "Most stock tools are built around US markets. I wanted a quick, plain-language read on Nigerian stocks: pick a company and a date range, and get a short verdict on how it has performed.",
+      decisions: [
+        {
+          id: 1,
+          title: "data that covers nigeria",
+          detail:
+            "I started on the Polygon API, but it doesn't list Nigerian stocks, so I moved to EODHD, which covers the Nigerian Exchange.",
+        },
+        {
+          id: 2,
+          title: "a short, opinionated report",
+          detail:
+            "Mistral is asked for a report of no more than 150 words that describes the stock's performance and recommends whether to buy, hold or sell, so the answer fits on one screen.",
+        },
+        {
+          id: 3,
+          title: "providers behind workers",
+          detail:
+            "Stock prices, the list of tickers and the AI report each come through their own Cloudflare Worker, rather than the app calling the data and AI providers directly.",
+        },
+      ],
+      outcome:
+        "A single-page tool: choose a Nigerian Exchange stock and a date range, and a report appears with a clear recommendation, with loading skeletons while it's generated.",
+    },
   },
   {
     id: 3,
+    slug: "handbook-agent",
     title: "employee handbook agent",
     description:
       "An AI-powered chatbot that helps employees quickly find information in the company handbook.",
     tech_used: ["react", "mistral ai", "node.js", "remix", "tailwind css", "shadcn"],
+    repo: "https://github.com/urielaweobe/remix-shadcn-chat",
     img: "/images/handbook-agent.webp",
+    caseStudy: {
+      problem:
+        "Company handbooks are long and rarely read end to end. I wanted employees to ask a question in plain words and get an answer grounded in the handbook itself, not in the model's general knowledge.",
+      decisions: [
+        {
+          id: 1,
+          title: "retrieval before generation",
+          detail:
+            "Each question is turned into an embedding with mistral-embed and matched against handbook passages stored in Supabase. Only the five closest passages above a 0.78 similarity threshold are given to the model as context.",
+        },
+        {
+          id: 2,
+          title: "answers you can scan",
+          detail:
+            "The model's replies are formatted into headings, numbered steps and bullet points before they're shown, so a policy answer reads like a policy.",
+        },
+        {
+          id: 3,
+          title: "room to grow into an agent",
+          detail:
+            "I also experimented with Mistral function calling, letting the model call tools such as a payment-status lookup over up to three rounds before answering.",
+        },
+      ],
+      outcome:
+        "A chat interface with saved conversations that answers handbook questions from the handbook's own text, and a base for trying agents that use tools.",
+    },
   },
 ];
