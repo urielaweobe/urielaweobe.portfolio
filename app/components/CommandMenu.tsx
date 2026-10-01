@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { LuSearch } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { toggleTheme } from "~/components/ThemeToggle";
 import { cn } from "~/lib/utils";
@@ -141,14 +142,15 @@ export function CommandMenu() {
         type="button"
         onClick={open}
         aria-label="open command menu"
-        className="hidden cursor-pointer rounded-md border px-1.5 py-0.5 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-block"
+        className="cursor-pointer rounded-md -m-2 p-3 transition-colors hover:bg-accent hover:text-accent-foreground sm:m-0 sm:border sm:px-1.5 sm:py-0.5 sm:text-xs sm:text-muted-foreground"
       >
-        {shortcutLabel}
+        <LuSearch className="sm:hidden" />
+        <span className="hidden sm:inline">{shortcutLabel}</span>
       </button>
       <dialog
         ref={dialogRef}
         aria-label="command menu"
-        className="mx-auto mt-[15vh] w-[calc(100%-2rem)] max-w-md overflow-hidden rounded-xl border bg-background/80 p-0 text-sm text-foreground shadow-2xl backdrop-blur-md backdrop-saturate-150 backdrop:bg-black/20 dark:backdrop:bg-black/50 md:text-base"
+        className="mx-auto mt-4 w-[calc(100%-2rem)] sm:mt-[15vh] max-w-md overflow-hidden rounded-xl border bg-background/80 p-0 text-sm text-foreground shadow-2xl backdrop-blur-md backdrop-saturate-150 backdrop:bg-black/20 dark:backdrop:bg-black/50 md:text-base"
       >
         <input
           type="text"
@@ -167,7 +169,7 @@ export function CommandMenu() {
           ref={listRef}
           id={listId}
           aria-label="results"
-          className="max-h-[50vh] overflow-y-auto p-2"
+          className="max-h-[40vh] overflow-y-auto p-2 sm:max-h-[50vh]"
         >
           {groups.map((group) => (
             <li key={group}>
