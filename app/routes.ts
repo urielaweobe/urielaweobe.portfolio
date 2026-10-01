@@ -16,4 +16,5 @@ export default [
     route("contact", "portfolio/contact.tsx"),
     route("*", "portfolio/not-found.tsx"),
   ]),
+  route("og/*", "share-image.tsx"),
 ] satisfies RouteConfig;
