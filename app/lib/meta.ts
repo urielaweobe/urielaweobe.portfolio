@@ -12,8 +12,7 @@ export function getMeta({ page, path, description }: MetaInput) {
     ? `${page} — ${siteName}`
     : `${siteName} — Frontend Engineer at Paystack`;
   const url = `${siteUrl}${path}`;
-  const image = `${siteUrl}/og.png`;
-  const imageAlt = `${siteName}, Frontend Engineer, turning complex ideas into smooth, engaging web experiences.`;
+  const image = `${siteUrl}/og/${path === "/" ? "home" : path.slice(1)}.png`;
 
   return [
     { title },
@@ -27,10 +26,10 @@ export function getMeta({ page, path, description }: MetaInput) {
     { property: "og:image", content: image },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
-    { property: "og:image:alt", content: imageAlt },
+    { property: "og:image:alt", content: title },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:site", content: "@urielaweobe" },
     { name: "twitter:image", content: image },
-    { name: "twitter:image:alt", content: imageAlt },
+    { name: "twitter:image:alt", content: title },
   ];
 }
