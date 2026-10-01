@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router";
+import { CommandMenu } from "~/components/CommandMenu";
 import { MobileNav } from "~/components/MobileNav";
 import { ThemeToggle } from "~/components/ThemeToggle";
 import { navLinks } from "~/utils";
@@ -28,6 +29,7 @@ export default function Layout() {
           ))}
         </ul>
         <div className="ml-auto flex items-center gap-x-5 sm:ml-0 sm:gap-x-3">
+          <CommandMenu />
           <ThemeToggle />
           <MobileNav />
         </div>
