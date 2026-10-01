@@ -163,13 +163,13 @@ export function CommandMenu() {
             setActiveIndex(0);
           }}
           onKeyDown={onInputKeyDown}
-          className="w-full border-b bg-transparent px-4 py-3 outline-none placeholder:text-muted-foreground"
+          className="w-full border-b bg-transparent px-4 py-3 text-base outline-none placeholder:text-muted-foreground"
         />
         <ul
           ref={listRef}
           id={listId}
           aria-label="results"
-          className="max-h-[40vh] overflow-y-auto p-2 sm:max-h-[50vh]"
+          className="max-h-[40vh] overflow-y-auto overscroll-contain p-2 sm:max-h-[50vh]"
         >
           {groups.map((group) => (
             <li key={group}>
