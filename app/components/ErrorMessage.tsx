@@ -12,7 +12,7 @@ export function ErrorMessage({ error }: { error: unknown }) {
   return (
     <section className="w-full flex flex-row justify-center">
       <div className="flex flex-col w-full gap-4 max-w-xs text-sm md:text-base lg:max-w-125">
-        <p className="border-b pb-3 text-xs tabular-nums text-muted-foreground md:text-sm">
+        <p className="border-b pb-3 font-mono text-xs tabular-nums text-muted-foreground">
           {status ? `error ${status}` : "error"}
         </p>
         <h1 className="text-xl font-medium md:text-2xl">
