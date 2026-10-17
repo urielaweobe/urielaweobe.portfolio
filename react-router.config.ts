@@ -9,7 +9,6 @@ export default {
       "/about",
       "/contact",
       "/projects",
-      "/certifications",
       "/experience",
       ...projects.map((project) => `/projects/${project.slug}`),
       ...Object.keys(shareCards).map((key) => `/og/${key}.png`),

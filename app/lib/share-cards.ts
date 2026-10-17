@@ -34,12 +34,6 @@ export const shareCards: Record<string, ShareCard> = {
       "An AI stock analyst, an employee handbook chatbot, and this portfolio.",
     footer: role,
   },
-  certifications: {
-    title: "certifications & courses",
-    subtitle:
-      "Courses from Frontend Masters, Scrimba, Udemy and freeCodeCamp.",
-    footer: role,
-  },
   contact: {
     title: "connect",
     subtitle: "Find me on GitHub, LinkedIn, X, Threads and Instagram.",
