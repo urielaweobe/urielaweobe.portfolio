@@ -42,7 +42,7 @@ function SiteShell({ children }: { children: ReactNode }) {
                 to={navLink.url}
                 prefetch="intent"
                 viewTransition
-                className="link-highlight link-sweep py-1 font-mono text-xs uppercase tracking-wider aria-[current=page]:font-medium"
+                className="link-highlight link-sweep py-1 font-mono text-xs aria-[current=page]:font-medium"
               >
                 {navLink.name}
               </NavLink>

@@ -179,7 +179,7 @@ export function CommandMenu() {
         >
           {groups.map((group) => (
             <li key={group}>
-              <p className="px-2 pt-2 pb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              <p className="px-2 pt-2 pb-1 font-mono text-xs text-muted-foreground">
                 {group}
               </p>
               <ul>

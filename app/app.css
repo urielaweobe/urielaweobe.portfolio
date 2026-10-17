@@ -5,10 +5,10 @@
 
 @theme {
 	--font-sans:
-		"Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Instrument Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-mono:
-		"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+		"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html,
