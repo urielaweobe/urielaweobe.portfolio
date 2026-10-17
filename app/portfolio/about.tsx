@@ -91,16 +91,39 @@ export default function About() {
             powered by Mistral AI.
           </p>
           <p>
-            I’ve also earned several{" "}
+            Recently I’ve studied{" "}
             <Link
-              to="/certifications"
-              viewTransition
+              to="https://static.frontendmasters.com/ud/c/320f842bcf/fjjCYVxYTO/javascript-hard-parts-v2.pdf"
+              target="_blank"
               className="underline link-highlight"
             >
-              certifications
+              JavaScript: The Hard Parts
+            </Link>
+            ,{" "}
+            <Link
+              to="https://static.frontendmasters.com/ud/c/320f842bcf/ILBMAduteI/functional-first-steps-v2.pdf"
+              target="_blank"
+              className="underline link-highlight"
+            >
+              Functional Programming
             </Link>{" "}
-            to strengthen my skills and broaden my perspective as a frontend
-            engineer.
+            and{" "}
+            <Link
+              to="https://static.frontendmasters.com/ud/c/320f842bcf/vPhemeDrGg/cloud-infrastructure.pdf"
+              target="_blank"
+              className="underline link-highlight"
+            >
+              Cloud Infrastructure
+            </Link>{" "}
+            on Frontend Masters, and{" "}
+            <Link
+              to="https://scrimba.com/certificate-cert24zAwJ77fGJc4uqn3annHSCJGkUZBXLrqKe9p"
+              target="_blank"
+              className="underline link-highlight"
+            >
+              The AI Engineer Path
+            </Link>{" "}
+            on Scrimba.
           </p>
           <p>
             Want to build something together?{" "}

@@ -23,11 +23,7 @@ export function CommandMenu() {
   const listId = useId();
 
   const commands: Command[] = [
-    ...[
-      { name: "home", url: "/" },
-      ...navLinks,
-      { name: "certifications", url: "/certifications" },
-    ].map((page) => ({
+    ...[{ name: "home", url: "/" }, ...navLinks].map((page) => ({
       id: `page-${page.url}`,
       group: "pages",
       label: page.name,
