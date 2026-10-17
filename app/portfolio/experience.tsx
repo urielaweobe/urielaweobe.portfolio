@@ -54,7 +54,7 @@ export default function Experience() {
                       />
                       <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                         <h3 className="font-semibold">{role.title}</h3>
-                        <p className="font-mono text-xs uppercase tracking-wider tabular-nums text-muted-foreground">
+                        <p className="font-mono text-xs tabular-nums text-muted-foreground">
                           {role.period}
                         </p>
                       </div>

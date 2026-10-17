@@ -83,7 +83,7 @@ export default function Projects() {
                     aria-hidden
                     className="size-5 self-center motion-safe:transition-transform motion-safe:duration-300 group-open/row:rotate-45"
                   />
-                  <span className="col-start-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                  <span className="col-start-2 font-mono text-xs text-muted-foreground">
                     {project.tech_used.join(" · ")}
                   </span>
                 </summary>

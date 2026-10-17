@@ -31,7 +31,7 @@ export function meta() {
 export default function Home() {
   return (
     <section className="w-full flex flex-row justify-center">
-      <div className="flex flex-col w-full gap-6 max-w-xs text-xl leading-snug font-medium tracking-tight md:text-2xl lg:max-w-125">
+      <div className="flex flex-col w-full gap-6 max-w-xs text-xl leading-snug font-normal tracking-tight md:text-2xl lg:max-w-125">
         <h1>
           Hi, I’m{" "}
           <Link to="/about" viewTransition className="underline link-highlight">

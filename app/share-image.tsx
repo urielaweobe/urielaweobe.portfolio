@@ -14,8 +14,8 @@ export async function loader({ params }: Route.LoaderArgs) {
   const [{ Resvg }, { default: satori }, regular, bold] = await Promise.all([
     import("@resvg/resvg-js"),
     import("satori"),
-    readFile(join(fontsDirectory, "SchibstedGrotesk-Regular.ttf")),
-    readFile(join(fontsDirectory, "SchibstedGrotesk-Bold.ttf")),
+    readFile(join(fontsDirectory, "InstrumentSans-Regular.ttf")),
+    readFile(join(fontsDirectory, "InstrumentSans-Bold.ttf")),
   ]);
 
   const svg = await satori(
@@ -29,7 +29,7 @@ export async function loader({ params }: Route.LoaderArgs) {
         padding: 88,
         background: "#0f1113",
         color: "#eceef0",
-        fontFamily: "Schibsted Grotesk",
+        fontFamily: "Instrument Sans",
       }}
     >
       <div
@@ -77,13 +77,13 @@ export async function loader({ params }: Route.LoaderArgs) {
       height: HEIGHT,
       fonts: [
         {
-          name: "Schibsted Grotesk",
+          name: "Instrument Sans",
           data: regular,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Schibsted Grotesk",
+          name: "Instrument Sans",
           data: bold,
           weight: 700,
           style: "normal",

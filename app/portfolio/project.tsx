@@ -40,7 +40,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
           previousPage="projects"
           previousPageUrl="/projects"
         />
-        <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="font-mono text-xs text-muted-foreground">
           {project.tech_used.join(" · ")}
         </p>
         <img
@@ -52,12 +52,12 @@ export default function Project({ loaderData }: Route.ComponentProps) {
           className="w-full h-auto rounded-lg border"
         />
 
-        <h2 className="mt-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <h2 className="mt-4 font-mono text-xs text-muted-foreground">
           the problem
         </h2>
         <p>{project.caseStudy.problem}</p>
 
-        <h2 className="mt-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <h2 className="mt-4 font-mono text-xs text-muted-foreground">
           what I decided
         </h2>
         <ol className="border-t">
@@ -75,7 +75,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
           ))}
         </ol>
 
-        <h2 className="mt-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <h2 className="mt-4 font-mono text-xs text-muted-foreground">
           the outcome
         </h2>
         <p>{project.caseStudy.outcome}</p>
@@ -107,7 +107,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
           viewTransition
           className="group mt-6 flex items-baseline justify-between gap-x-4 border-t pt-4"
         >
-          <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+          <span className="font-mono text-xs text-muted-foreground">
             next
           </span>
           <span className="flex items-center gap-x-1.5 text-base md:text-lg">
