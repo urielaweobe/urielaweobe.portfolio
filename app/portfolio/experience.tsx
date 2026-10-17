@@ -28,7 +28,7 @@ export default function Experience() {
               key={experience.id}
               className="grid grid-cols-[2.5rem_1fr] gap-x-2 border-b py-6"
             >
-              <span className="pt-2 text-xs tabular-nums text-muted-foreground">
+              <span className="pt-2 font-mono text-xs tabular-nums text-muted-foreground">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div>
@@ -54,7 +54,7 @@ export default function Experience() {
                       />
                       <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                         <h3 className="font-semibold">{role.title}</h3>
-                        <p className="text-xs text-muted-foreground md:text-sm">
+                        <p className="font-mono text-xs uppercase tracking-wider tabular-nums text-muted-foreground">
                           {role.period}
                         </p>
                       </div>

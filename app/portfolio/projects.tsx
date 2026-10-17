@@ -68,7 +68,7 @@ export default function Projects() {
             >
               <details className="project-details group/row">
                 <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 gap-y-1 py-5 outline-offset-4 [&::-webkit-details-marker]:hidden">
-                  <span className="text-xs tabular-nums text-muted-foreground">
+                  <span className="font-mono text-xs tabular-nums text-muted-foreground">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <h2
@@ -83,7 +83,7 @@ export default function Projects() {
                     aria-hidden
                     className="size-5 self-center motion-safe:transition-transform motion-safe:duration-300 group-open/row:rotate-45"
                   />
-                  <span className="col-start-2 text-xs text-muted-foreground md:text-sm">
+                  <span className="col-start-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
                     {project.tech_used.join(" · ")}
                   </span>
                 </summary>

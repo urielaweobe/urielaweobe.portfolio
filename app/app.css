@@ -5,8 +5,10 @@
 
 @theme {
 	--font-sans:
-		"Quicksand", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-mono:
+		"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html,
@@ -89,41 +91,43 @@ body {}
 	--radius:
 		0.625rem;
 	--background:
-		oklch(1 0 0);
+		#fbfbfa;
 	--foreground:
-		oklch(0.145 0 0);
+		#131518;
 	--card:
-		oklch(1 0 0);
+		#fbfbfa;
 	--card-foreground:
-		oklch(0.145 0 0);
+		#131518;
 	--popover:
-		oklch(1 0 0);
+		#ffffff;
 	--popover-foreground:
-		oklch(0.145 0 0);
+		#131518;
 	--primary:
-		oklch(0.205 0 0);
+		#131518;
 	--primary-foreground:
-		oklch(0.985 0 0);
+		#fbfbfa;
 	--secondary:
-		oklch(0.97 0 0);
+		#f0f1f2;
 	--secondary-foreground:
-		oklch(0.205 0 0);
+		#131518;
 	--muted:
-		oklch(0.97 0 0);
+		#f0f1f2;
 	--muted-foreground:
-		oklch(0.556 0 0);
+		#6a6e75;
 	--accent:
-		oklch(0.97 0 0);
+		#f0f1f2;
 	--accent-foreground:
-		oklch(0.205 0 0);
+		#131518;
 	--destructive:
 		oklch(0.577 0.245 27.325);
 	--border:
-		oklch(0.922 0 0);
+		#e2e3e5;
 	--input:
-		oklch(0.922 0 0);
+		#e2e3e5;
+	--link:
+		#2747d6;
 	--ring:
-		oklch(0.708 0 0);
+		#9a9ea5;
 	--chart-1:
 		oklch(0.646 0.222 41.116);
 	--chart-2:
@@ -154,41 +158,43 @@ body {}
 
 .dark {
 	--background:
-		oklch(0.145 0 0);
+		#0f1113;
 	--foreground:
-		oklch(0.985 0 0);
+		#eceef0;
 	--card:
-		oklch(0.205 0 0);
+		#16181b;
 	--card-foreground:
-		oklch(0.985 0 0);
+		#eceef0;
 	--popover:
-		oklch(0.205 0 0);
+		#16181b;
 	--popover-foreground:
-		oklch(0.985 0 0);
+		#eceef0;
 	--primary:
-		oklch(0.922 0 0);
+		#eceef0;
 	--primary-foreground:
-		oklch(0.205 0 0);
+		#16181b;
 	--secondary:
-		oklch(0.269 0 0);
+		#1d2024;
 	--secondary-foreground:
-		oklch(0.985 0 0);
+		#eceef0;
 	--muted:
-		oklch(0.269 0 0);
+		#1d2024;
 	--muted-foreground:
-		oklch(0.708 0 0);
+		#8d929a;
 	--accent:
-		oklch(0.269 0 0);
+		#1d2024;
 	--accent-foreground:
-		oklch(0.985 0 0);
+		#eceef0;
 	--destructive:
 		oklch(0.704 0.191 22.216);
 	--border:
-		oklch(1 0 0 / 10%);
+		#24272b;
 	--input:
-		oklch(1 0 0 / 15%);
+		#2c2f34;
+	--link:
+		#8fa3ff;
 	--ring:
-		oklch(0.556 0 0);
+		#5d626a;
 	--chart-1:
 		oklch(0.488 0.243 264.376);
 	--chart-2:
@@ -231,6 +237,7 @@ body {}
 
 @layer components {
 	.link-highlight {
+		text-decoration-color: var(--link);
 		border-radius: var(--radius-sm);
 		padding-inline: 0.3rem;
 		margin-inline: -0.3rem;

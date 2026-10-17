@@ -179,7 +179,7 @@ export function CommandMenu() {
         >
           {groups.map((group) => (
             <li key={group}>
-              <p className="px-2 pt-2 pb-1 text-xs text-muted-foreground">
+              <p className="px-2 pt-2 pb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 {group}
               </p>
               <ul>
@@ -202,7 +202,7 @@ export function CommandMenu() {
                         )}
                       >
                         <span>{command.label}</span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className="font-mono text-xs text-muted-foreground">
                           {command.hint}
                         </span>
                       </button>

@@ -14,8 +14,8 @@ export async function loader({ params }: Route.LoaderArgs) {
   const [{ Resvg }, { default: satori }, regular, bold] = await Promise.all([
     import("@resvg/resvg-js"),
     import("satori"),
-    readFile(join(fontsDirectory, "Quicksand-Regular.ttf")),
-    readFile(join(fontsDirectory, "Quicksand-Bold.ttf")),
+    readFile(join(fontsDirectory, "SchibstedGrotesk-Regular.ttf")),
+    readFile(join(fontsDirectory, "SchibstedGrotesk-Bold.ttf")),
   ]);
 
   const svg = await satori(
@@ -27,9 +27,9 @@ export async function loader({ params }: Route.LoaderArgs) {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: 88,
-        background: "#0a0a0a",
-        color: "#fafafa",
-        fontFamily: "Quicksand",
+        background: "#0f1113",
+        color: "#eceef0",
+        fontFamily: "Schibsted Grotesk",
       }}
     >
       <div
@@ -37,17 +37,24 @@ export async function loader({ params }: Route.LoaderArgs) {
           display: "flex",
           justifyContent: "space-between",
           fontSize: 28,
-          color: "#a3a3a3",
+          color: "#8d929a",
         }}
       >
         <span>urielaweobe.com</span>
         {card.label && <span>{card.label}</span>}
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-        <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
+        <div
+          style={{
+            fontSize: 76,
+            fontWeight: 700,
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
+          }}
+        >
           {card.title}
         </div>
-        <div style={{ fontSize: 34, color: "#d4d4d4", lineHeight: 1.35 }}>
+        <div style={{ fontSize: 34, color: "#c9ccd1", lineHeight: 1.35 }}>
           {card.subtitle}
         </div>
       </div>
@@ -55,10 +62,10 @@ export async function loader({ params }: Route.LoaderArgs) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          borderTop: "1px solid #262626",
+          borderTop: "1px solid #24272b",
           paddingTop: 28,
           fontSize: 26,
-          color: "#a3a3a3",
+          color: "#8d929a",
         }}
       >
         <span>Uriel Awe-Obe</span>
@@ -69,8 +76,18 @@ export async function loader({ params }: Route.LoaderArgs) {
       width: WIDTH,
       height: HEIGHT,
       fonts: [
-        { name: "Quicksand", data: regular, weight: 400, style: "normal" },
-        { name: "Quicksand", data: bold, weight: 700, style: "normal" },
+        {
+          name: "Schibsted Grotesk",
+          data: regular,
+          weight: 400,
+          style: "normal",
+        },
+        {
+          name: "Schibsted Grotesk",
+          data: bold,
+          weight: 700,
+          style: "normal",
+        },
       ],
     },
   );

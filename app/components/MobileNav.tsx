@@ -101,7 +101,7 @@ export function MobileNav() {
                 viewTransition
                 className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-2 py-5"
               >
-                <span className="text-xs tabular-nums text-muted-foreground">
+                <span className="font-mono text-xs tabular-nums text-muted-foreground">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="text-4xl">{navLink.name}</span>
