@@ -1,2 +1,5 @@
 allowBuilds:
   esbuild: false
+
+overrides:
+  fflate@0.7.3: 0.7.5
